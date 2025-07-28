@@ -1,204 +1,151 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Edison | Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample HTML Document with Links and Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .nav-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav-links a {
+            margin: 0 15px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .image-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .image-card .caption {
+            padding: 15px;
+            background-color: #f8f9fa;
+        }
+        .external-links {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Welcome to My Sample HTML Page</h1>
+        
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+            <a href="#links">Links</a>
+        </nav>
 
-  <!-- Header will load here -->
- <header class="site-header">
-  <nav class="navbar">
-    <div class="logo"><a href="index.html">Edison</a></div>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+        <section id="about">
+            <h2>About This Page</h2>
+            <p>This is a sample HTML document that demonstrates the use of various HTML elements including links and images. The page is designed to showcase how these elements can be used together to create an engaging web experience.</p>
+            <p>You can navigate through different sections using the <a href="#nav-links">navigation links</a> above, or explore the image gallery and external links below.</p>
+        </section>
 
+        <section id="gallery" class="image-gallery">
+            <h2 style="grid-column: 1 / -1; text-align: center;">Image Gallery</h2>
+            
+            <div class="image-card">
+                <img src="https://picsum.photos/300/200?random=1" alt="Random landscape image">
+                <div class="caption">
+                    <h3>Beautiful Landscape</h3>
+                    <p>A stunning view of nature's beauty captured in this random landscape image.</p>
+                </div>
+            </div>
 
-  <!-- Hero Section -->
-<section id="hero" class="hero-section">
-  <div class="hero-content">
-    <h1>Hi, I'm <span class="highlight">Edison</span></h1>
-    <p class="tagline">A passionate Web Developer crafting modern websites</p>
-    <a href="#projects" class="btn-primary">View My Projects</a>
-    <a href="resume/Edison-Koske-Resume.pdf" class="btn-secondary" download>Download Resume</a>
-  </div>
-  <div class="hero-img">
-    <img src="images/profile.jpg" alt="Profile Image" />
-  </div>
-</section>
+            <div class="image-card">
+                <img src="https://picsum.photos/300/200?random=2" alt="Random architecture image">
+                <div class="caption">
+                    <h3>Modern Architecture</h3>
+                    <p>Contemporary architectural design showcasing clean lines and innovative structure.</p>
+                </div>
+            </div>
 
+            <div class="image-card">
+                <img src="https://picsum.photos/300/200?random=3" alt="Random nature image">
+                <div class="caption">
+                    <h3>Natural Wonder</h3>
+                    <p>An amazing natural formation that demonstrates the power and beauty of our planet.</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- HERO, ABOUT, SKILLS, PROJECTS, CONTACT will go here -->
-<!-- About Section -->
-<section id="about" class="about-section">
-  <div class="container">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <img src="images/about.jpg" alt="About Image" class="about-img">
-      <div class="about-text">
-        <p>
-          I'm a passionate front-end developer with a love for clean code and beautiful design.
-          I specialize in creating responsive, user-friendly websites using HTML, CSS, and JavaScript.
-          I'm always eager to learn new technologies and take on exciting challenges.
-        </p>
-        <p>
-          When I'm not coding, you can find me exploring design trends, collaborating with other developers,
-          or refining my skills.
-        </p>
-        <a href="#contact" class="btn-primary">Let's Connect</a>
-      </div>
+        <section id="links" class="external-links">
+            <h2>Useful Links</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML Documentation</a> - Comprehensive HTML reference</li>
+                <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a> - Learn HTML step by step</li>
+                <li><a href="https://html.spec.whatwg.org/" target="_blank">HTML Living Standard</a> - Official HTML specification</li>
+                <li><a href="https://validator.w3.org/" target="_blank">HTML Validator</a> - Validate your HTML code</li>
+                <li><a href="https://unsplash.com/" target="_blank">Unsplash</a> - Free high-quality images</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>For more information, you can reach out through the following methods:</p>
+            <ul>
+                <li>Email: <a href="mailto:example@email.com">example@email.com</a></li>
+                <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                <li>Website: <a href="https://example.com" target="_blank">https://example.com</a></li>
+            </ul>
+        </section>
+
+        <footer style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd;">
+            <p>&copy; 2024 Sample HTML Document. Created for demonstration purposes.</p>
+            <p>
+                <a href="#top">Back to Top</a> | 
+                <a href="https://github.com" target="_blank">GitHub</a> | 
+                <a href="https://stackoverflow.com" target="_blank">Stack Overflow</a>
+            </p>
+        </footer>
     </div>
-  </div>
-</section>
-<!-- Skills Section -->
-<section id="skills" class="skills-section">
-  <div class="container">
-    <h2>My Skills</h2>
-
-    <div class="skills-icons">
-      <img src="images/html5.png" alt="HTML5" title="HTML5">
-      <img src="images/css3.png" alt="CSS3" title="CSS3">
-      <img src="images/javascript.png" alt="JavaScript" title="JavaScript">
-      <!-- Add more icons if needed -->
-    </div>
-
-    <div class="skill-bars">
-      <div class="skill">
-        <span>HTML</span>
-        <div class="progress"><div class="progress-bar html"></div></div>
-      </div>
-      <div class="skill">
-        <span>CSS</span>
-        <div class="progress"><div class="progress-bar css"></div></div>
-      </div>
-      <div class="skill">
-        <span>JavaScript</span>
-        <div class="progress"><div class="progress-bar js"></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="projects" class="projects">
-  <h2>My Projects</h2>
-  <div class="project-container">
-    <div class="project-card">
-      <img src="images/project1.jpg" alt="Project 1">
-      <h3>Portfolio Website</h3>
-      <p>A responsive website built with HTML, CSS, and JS showcasing my work and skills.</p>
-      <a href="#" target="_blank">View Live</a>
-      <a href="https://github.com/Edkoske" target="_blank" class="btn">See on GitHub</a>
-
-    </div>
-
-    <div class="project-card">
-      <img src="images/project2.jpg" alt="Project 2">
-      <h3>To-Do App</h3>
-      <p>A simple to-do list application using JavaScript with local storage.</p>
-      <a href="#" target="_blank">View Live</a>
-      <a href="https://github.com/Edkoske" target="_blank" class="btn">See on GitHub</a>
-
-    </div>
-
-    <div class="project-card">
-      <img src="images/project3.jpg" alt="Project 3">
-      <h3>Weather App</h3>
-      <p>Fetches real-time weather using the OpenWeather API and displays it beautifully.</p>
-      <a href="#" target="_blank">View Live</a>
-      <a href="https://github.com/Edkoske" target="_blank" class="btn">See on GitHub</a>
-
-    </div>
-  </div>
-</section>
-<section id="contact" class="contact">
-  <div class="container">
-    <h2>Contact Me</h2>
-
-    <form action="https://formspree.io/f/xovlwjld" method="POST" id="contactForm">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
-
-<!-- JavaScript: silent on failure -->
-<script>
-  document.getElementById("contactForm").addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const form = e.target;
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        alert("✅ Thank you! Your message has been sent.");
-        form.reset();
-      }
-      // 🔇 No else block — no error message on failure
-    } catch (error) {
-      // 🔇 No network error alert either
-    }
-  });
-</script>
-
-
-
-
-<!-- Thank You Popup -->
-<div class="popup" id="thankYouPopup">
-  <div class="popup-content">
-    <p>✅ Thank you for reaching out!</p>
-    <button onclick="closePopup()">Close</button>
-  </div>
-</div>
-<!-- Scroll To Top Button -->
-<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆</button>
-
-
-
-  <!-- Footer will load here -->
-  
-
-
-  <!-- WhatsApp floating button -->
-
-<footer class="footer">
-  <div class="footer-container">
-    <p>&copy; 2025 <strong>Edison</strong>. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="mailto:edisonkipkemoi319gmail.com" title="Email">
-        <i class="fas fa-envelope"></i> edisonkipkemoi319gmail.com
-      </a>
-      <a href="tel:+254727732157" title="Call">
-        <i class="fas fa-phone-alt"></i> +254 727 732 157
-      </a>
-      <a href="https://github.com/Edkoske" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-    </div>
-  </div>
-</footer>
 </body>
 </html>
