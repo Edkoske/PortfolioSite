@@ -1,204 +1,470 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Edison | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Edison Koske - Passionate Web Developer specializing in modern, responsive websites using HTML, CSS, and JavaScript.">
+  <meta name="keywords" content="Edison Koske, Web Developer, Frontend Developer, HTML, CSS, JavaScript, Portfolio">
+  <meta name="author" content="Edison Koske">
+  
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:title" content="Edison Koske | Web Developer Portfolio">
+  <meta property="og:description" content="Passionate Web Developer crafting modern, responsive websites">
+  <meta property="og:image" content="images/profile.jpg">
+  <meta property="og:url" content="#">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Edison Koske | Web Developer Portfolio">
+  <meta name="twitter:description" content="Passionate Web Developer crafting modern, responsive websites">
+  <meta name="twitter:image" content="images/profile.jpg">
+  
+  <title>Edison Koske | Web Developer Portfolio</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/script.js" defer></script>
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="js/script.js" as="script">
+  
+  <!-- External stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main" class="skip-link sr-only sr-only-focusable">Skip to main content</a>
 
-  <!-- Header will load here -->
- <header class="site-header">
-  <nav class="navbar">
-    <div class="logo"><a href="index.html">Edison</a></div>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="logo">
+        <a href="#hero" aria-label="Edison Koske - Home">Edison</a>
+      </div>
 
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
 
-  <!-- Hero Section -->
-<section id="hero" class="hero-section">
-  <div class="hero-content">
-    <h1>Hi, I'm <span class="highlight">Edison</span></h1>
-    <p class="tagline">A passionate Web Developer crafting modern websites</p>
-    <a href="#projects" class="btn-primary">View My Projects</a>
-    <a href="resume/Edison-Koske-Resume.pdf" class="btn-secondary" download>Download Resume</a>
+      <ul class="nav-links" id="nav-links" role="menubar">
+        <li role="none"><a href="#about" role="menuitem">About</a></li>
+        <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+        <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+        <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+        <li role="none">
+          <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+            🌙
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" role="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <h1 id="hero-heading">Hi, I'm <span class="highlight">Edison Koske</span></h1>
+        <p class="tagline">A passionate Web Developer crafting modern, responsive websites</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary" aria-describedby="projects-desc">
+            <i class="fas fa-folder-open" aria-hidden="true"></i>
+            View My Projects
+          </a>
+          <a href="resume/Edison-Koske-Resume.pdf" class="btn-secondary" download aria-describedby="resume-desc">
+            <i class="fas fa-download" aria-hidden="true"></i>
+            Download Resume
+          </a>
+        </div>
+        <span id="projects-desc" class="sr-only">Browse through my latest web development projects</span>
+        <span id="resume-desc" class="sr-only">Download my resume in PDF format</span>
+      </div>
+      <div class="hero-img">
+        <img src="images/profile.jpg" alt="Edison Koske - Professional headshot" loading="lazy">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading">About Me</h2>
+        <div class="about-content">
+          <img src="images/about.jpg" alt="Edison working at his desk" class="about-img" loading="lazy">
+          <div class="about-text">
+            <p>
+              I'm a passionate front-end developer with a love for clean code and beautiful design.
+              I specialize in creating responsive, user-friendly websites using modern web technologies
+              including HTML5, CSS3, and JavaScript.
+            </p>
+            <p>
+              With a keen eye for detail and a commitment to best practices, I'm always eager to learn
+              new technologies and take on exciting challenges that push the boundaries of web development.
+            </p>
+            <p>
+              When I'm not coding, you can find me exploring the latest design trends, collaborating with
+              other developers, or contributing to open-source projects.
+            </p>
+            <a href="#contact" class="btn-primary">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              Let's Connect
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section" aria-labelledby="skills-heading">
+      <div class="container">
+        <h2 id="skills-heading">My Skills</h2>
+
+        <div class="skills-icons" role="img" aria-label="Technology icons">
+          <img src="images/html5.png" alt="HTML5" title="HTML5" loading="lazy">
+          <img src="images/css3.png" alt="CSS3" title="CSS3" loading="lazy">
+          <img src="images/javascript.png" alt="JavaScript" title="JavaScript" loading="lazy">
+        </div>
+
+        <div class="skill-bars" role="region" aria-label="Skill proficiency levels">
+          <div class="skill">
+            <span>HTML5</span>
+            <div class="progress" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="HTML proficiency: 95%">
+              <div class="progress-bar html"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>CSS3</span>
+            <div class="progress" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="CSS proficiency: 90%">
+              <div class="progress-bar css"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>JavaScript</span>
+            <div class="progress" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency: 85%">
+              <div class="progress-bar js"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading">My Projects</h2>
+        <div class="project-container">
+          <article class="project-card">
+            <img src="images/project1.jpg" alt="Portfolio website screenshot" loading="lazy">
+            <div class="project-content">
+              <h3>Portfolio Website</h3>
+              <p>A responsive personal portfolio built with HTML5, CSS3, and JavaScript showcasing my work, skills, and experience.</p>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                  View Live
+                </a>
+                <a href="https://github.com/Edkoske" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="images/project2.jpg" alt="To-Do application interface" loading="lazy">
+            <div class="project-content">
+              <h3>Task Manager App</h3>
+              <p>An interactive to-do list application featuring local storage, drag-and-drop functionality, and a clean user interface.</p>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                  View Live
+                </a>
+                <a href="https://github.com/Edkoske" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="images/project3.jpg" alt="Weather application dashboard" loading="lazy">
+            <div class="project-content">
+              <h3>Weather Dashboard</h3>
+              <p>Real-time weather application using OpenWeather API with location detection, forecasts, and beautiful visualizations.</p>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                  View Live
+                </a>
+                <a href="https://github.com/Edkoske" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading">Get In Touch</h2>
+        <p class="contact-intro">Ready to start your next project? Let's work together!</p>
+
+        <form action="https://formspree.io/f/xovlwjld" method="POST" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name" class="sr-only">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required 
+                   aria-describedby="name-error" autocomplete="name">
+            <span id="name-error" class="error-message" role="alert"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="sr-only">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required 
+                   aria-describedby="email-error" autocomplete="email">
+            <span id="email-error" class="error-message" role="alert"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="message" class="sr-only">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required 
+                      aria-describedby="message-error"></textarea>
+            <span id="message-error" class="error-message" role="alert"></span>
+          </div>
+          
+          <button type="submit" class="btn-primary" id="submitBtn">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loading" style="display: none;">
+              <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+              Sending...
+            </span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/254727732157" class="whatsapp-float" target="_blank" rel="noopener noreferrer" 
+     aria-label="Contact via WhatsApp" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- Scroll To Top Button -->
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Back to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Success/Error Messages -->
+  <div class="popup" id="successPopup" role="dialog" aria-labelledby="success-title" aria-modal="true">
+    <div class="popup-content">
+      <h3 id="success-title">
+        <i class="fas fa-check-circle" aria-hidden="true"></i>
+        Message Sent!
+      </h3>
+      <p>Thank you for reaching out! I'll get back to you soon.</p>
+      <button onclick="closePopup('successPopup')" class="btn-primary">Close</button>
+    </div>
   </div>
-  <div class="hero-img">
-    <img src="images/profile.jpg" alt="Profile Image" />
+
+  <div class="popup" id="errorPopup" role="dialog" aria-labelledby="error-title" aria-modal="true">
+    <div class="popup-content">
+      <h3 id="error-title">
+        <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+        Oops!
+      </h3>
+      <p>Something went wrong. Please try again or contact me directly.</p>
+      <button onclick="closePopup('errorPopup')" class="btn-primary">Close</button>
+    </div>
   </div>
-</section>
 
-
-  <!-- HERO, ABOUT, SKILLS, PROJECTS, CONTACT will go here -->
-<!-- About Section -->
-<section id="about" class="about-section">
-  <div class="container">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <img src="images/about.jpg" alt="About Image" class="about-img">
-      <div class="about-text">
-        <p>
-          I'm a passionate front-end developer with a love for clean code and beautiful design.
-          I specialize in creating responsive, user-friendly websites using HTML, CSS, and JavaScript.
-          I'm always eager to learn new technologies and take on exciting challenges.
-        </p>
-        <p>
-          When I'm not coding, you can find me exploring design trends, collaborating with other developers,
-          or refining my skills.
-        </p>
-        <a href="#contact" class="btn-primary">Let's Connect</a>
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <p>&copy; 2025 <strong>Edison Koske</strong>. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="mailto:edisonkipkemoi319@gmail.com" title="Send email" aria-label="Send email to Edison">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          edisonkipkemoi319@gmail.com
+        </a>
+        <a href="tel:+254727732157" title="Call Edison" aria-label="Call Edison at +254 727 732 157">
+          <i class="fas fa-phone-alt" aria-hidden="true"></i>
+          +254 727 732 157
+        </a>
+        <a href="https://github.com/Edkoske" target="_blank" rel="noopener noreferrer" 
+           title="Visit GitHub profile" aria-label="Visit Edison's GitHub profile">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/edison-koske" target="_blank" rel="noopener noreferrer" 
+           title="Visit LinkedIn profile" aria-label="Visit Edison's LinkedIn profile">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          LinkedIn
+        </a>
       </div>
     </div>
-  </div>
-</section>
-<!-- Skills Section -->
-<section id="skills" class="skills-section">
-  <div class="container">
-    <h2>My Skills</h2>
+  </footer>
 
-    <div class="skills-icons">
-      <img src="images/html5.png" alt="HTML5" title="HTML5">
-      <img src="images/css3.png" alt="CSS3" title="CSS3">
-      <img src="images/javascript.png" alt="JavaScript" title="JavaScript">
-      <!-- Add more icons if needed -->
-    </div>
+  <!-- Scripts -->
+  <script src="js/script.js" defer></script>
+  
+  <!-- Enhanced Form Handling Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const btnText = submitBtn.querySelector('.btn-text');
+      const btnLoading = submitBtn.querySelector('.btn-loading');
 
-    <div class="skill-bars">
-      <div class="skill">
-        <span>HTML</span>
-        <div class="progress"><div class="progress-bar html"></div></div>
-      </div>
-      <div class="skill">
-        <span>CSS</span>
-        <div class="progress"><div class="progress-bar css"></div></div>
-      </div>
-      <div class="skill">
-        <span>JavaScript</span>
-        <div class="progress"><div class="progress-bar js"></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="projects" class="projects">
-  <h2>My Projects</h2>
-  <div class="project-container">
-    <div class="project-card">
-      <img src="images/project1.jpg" alt="Project 1">
-      <h3>Portfolio Website</h3>
-      <p>A responsive website built with HTML, CSS, and JS showcasing my work and skills.</p>
-      <a href="#" target="_blank">View Live</a>
-      <a href="https://github.com/Edkoske" target="_blank" class="btn">See on GitHub</a>
+      // Form validation
+      function validateField(field) {
+        const value = field.value.trim();
+        const errorElement = document.getElementById(field.name + '-error');
+        let isValid = true;
 
-    </div>
+        switch(field.type) {
+          case 'text':
+            if (value.length < 2) {
+              errorElement.textContent = 'Name must be at least 2 characters long';
+              isValid = false;
+            }
+            break;
+          case 'email':
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(value)) {
+              errorElement.textContent = 'Please enter a valid email address';
+              isValid = false;
+            }
+            break;
+          default:
+            if (value.length < 10) {
+              errorElement.textContent = 'Message must be at least 10 characters long';
+              isValid = false;
+            }
+        }
 
-    <div class="project-card">
-      <img src="images/project2.jpg" alt="Project 2">
-      <h3>To-Do App</h3>
-      <p>A simple to-do list application using JavaScript with local storage.</p>
-      <a href="#" target="_blank">View Live</a>
-      <a href="https://github.com/Edkoske" target="_blank" class="btn">See on GitHub</a>
+        if (isValid) {
+          errorElement.textContent = '';
+          field.classList.remove('error');
+        } else {
+          field.classList.add('error');
+        }
 
-    </div>
+        return isValid;
+      }
 
-    <div class="project-card">
-      <img src="images/project3.jpg" alt="Project 3">
-      <h3>Weather App</h3>
-      <p>Fetches real-time weather using the OpenWeather API and displays it beautifully.</p>
-      <a href="#" target="_blank">View Live</a>
-      <a href="https://github.com/Edkoske" target="_blank" class="btn">See on GitHub</a>
-
-    </div>
-  </div>
-</section>
-<section id="contact" class="contact">
-  <div class="container">
-    <h2>Contact Me</h2>
-
-    <form action="https://formspree.io/f/xovlwjld" method="POST" id="contactForm">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
-
-<!-- JavaScript: silent on failure -->
-<script>
-  document.getElementById("contactForm").addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const form = e.target;
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { 'Accept': 'application/json' }
+      // Real-time validation
+      form.querySelectorAll('input, textarea').forEach(field => {
+        field.addEventListener('blur', () => validateField(field));
+        field.addEventListener('input', () => {
+          if (field.classList.contains('error')) {
+            validateField(field);
+          }
+        });
       });
 
-      if (response.ok) {
-        alert("✅ Thank you! Your message has been sent.");
-        form.reset();
+      // Form submission
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Validate all fields
+        const fields = form.querySelectorAll('input, textarea');
+        let isFormValid = true;
+        
+        fields.forEach(field => {
+          if (!validateField(field)) {
+            isFormValid = false;
+          }
+        });
+
+        if (!isFormValid) return;
+
+        // Show loading state
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'inline-block';
+        submitBtn.disabled = true;
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            form.reset();
+            showPopup('successPopup');
+          } else {
+            showPopup('errorPopup');
+          }
+        } catch (error) {
+          showPopup('errorPopup');
+        } finally {
+          // Reset button state
+          btnText.style.display = 'inline-block';
+          btnLoading.style.display = 'none';
+          submitBtn.disabled = false;
+        }
+      });
+
+      function showPopup(popupId) {
+        const popup = document.getElementById(popupId);
+        popup.style.display = 'flex';
+        popup.setAttribute('aria-hidden', 'false');
+        // Focus trap
+        const focusableElements = popup.querySelectorAll('button');
+        if (focusableElements.length > 0) {
+          focusableElements[0].focus();
+        }
       }
-      // 🔇 No else block — no error message on failure
-    } catch (error) {
-      // 🔇 No network error alert either
+
+      window.closePopup = function(popupId) {
+        const popup = document.getElementById(popupId);
+        popup.style.display = 'none';
+        popup.setAttribute('aria-hidden', 'true');
+      };
+
+      // Close popup on escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.popup').forEach(popup => {
+            if (popup.style.display === 'flex') {
+              popup.style.display = 'none';
+              popup.setAttribute('aria-hidden', 'true');
+            }
+          });
+        }
+      });
+    });
+
+    // Scroll to top function
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
-  });
-</script>
 
-
-
-
-<!-- Thank You Popup -->
-<div class="popup" id="thankYouPopup">
-  <div class="popup-content">
-    <p>✅ Thank you for reaching out!</p>
-    <button onclick="closePopup()">Close</button>
-  </div>
-</div>
-<!-- Scroll To Top Button -->
-<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆</button>
-
-
-
-  <!-- Footer will load here -->
-  
-
-
-  <!-- WhatsApp floating button -->
-
-<footer class="footer">
-  <div class="footer-container">
-    <p>&copy; 2025 <strong>Edison</strong>. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="mailto:edisonkipkemoi319gmail.com" title="Email">
-        <i class="fas fa-envelope"></i> edisonkipkemoi319gmail.com
-      </a>
-      <a href="tel:+254727732157" title="Call">
-        <i class="fas fa-phone-alt"></i> +254 727 732 157
-      </a>
-      <a href="https://github.com/Edkoske" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-    </div>
-  </div>
-</footer>
+    // Show/hide scroll to top button
+    window.addEventListener('scroll', function() {
+      const scrollBtn = document.getElementById('scrollTopBtn');
+      if (window.pageYOffset > 300) {
+        scrollBtn.style.display = 'block';
+      } else {
+        scrollBtn.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
