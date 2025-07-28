@@ -1,0 +1,175 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edison | Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- Header will load here -->
+  <div id="header-placeholder"></div>
+  <!-- Hero Section -->
+<section id="hero" class="hero-section">
+  <div class="hero-content">
+    <h1>Hi, I'm <span class="highlight">Edison</span></h1>
+    <p class="tagline">A passionate Web Developer crafting modern websites</p>
+    <a href="#projects" class="btn-primary">View My Projects</a>
+    <a href="resume/Edison-Koske-Resume.pdf" class="btn-secondary" download>Download Resume</a>
+  </div>
+  <div class="hero-img">
+    <img src="images/profile.jpg" alt="Profile Image" />
+  </div>
+</section>
+
+
+  <!-- HERO, ABOUT, SKILLS, PROJECTS, CONTACT will go here -->
+<!-- About Section -->
+<section id="about" class="about-section">
+  <div class="container">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="images/about.jpg" alt="About Image" class="about-img">
+      <div class="about-text">
+        <p>
+          I'm a passionate front-end developer with a love for clean code and beautiful design.
+          I specialize in creating responsive, user-friendly websites using HTML, CSS, and JavaScript.
+          I'm always eager to learn new technologies and take on exciting challenges.
+        </p>
+        <p>
+          When I'm not coding, you can find me exploring design trends, collaborating with other developers,
+          or refining my skills.
+        </p>
+        <a href="#contact" class="btn-primary">Let's Connect</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+  <div class="container">
+    <h2>My Skills</h2>
+
+    <div class="skills-icons">
+      <img src="images/html5.png" alt="HTML5" title="HTML5">
+      <img src="images/css3.png" alt="CSS3" title="CSS3">
+      <img src="images/javascript.png" alt="JavaScript" title="JavaScript">
+      <!-- Add more icons if needed -->
+    </div>
+
+    <div class="skill-bars">
+      <div class="skill">
+        <span>HTML</span>
+        <div class="progress"><div class="progress-bar html"></div></div>
+      </div>
+      <div class="skill">
+        <span>CSS</span>
+        <div class="progress"><div class="progress-bar css"></div></div>
+      </div>
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="progress"><div class="progress-bar js"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="projects" class="projects">
+  <h2>My Projects</h2>
+  <div class="project-container">
+    <div class="project-card">
+      <img src="images/project1.jpg" alt="Project 1">
+      <h3>Portfolio Website</h3>
+      <p>A responsive website built with HTML, CSS, and JS showcasing my work and skills.</p>
+      <a href="#" target="_blank">View Live</a>
+      <a href="https://github.com/Edkoske" target="_blank" class="btn">See on GitHub</a>
+
+    </div>
+
+    <div class="project-card">
+      <img src="images/project2.jpg" alt="Project 2">
+      <h3>To-Do App</h3>
+      <p>A simple to-do list application using JavaScript with local storage.</p>
+      <a href="#" target="_blank">View Live</a>
+      <a href="https://github.com/Edkoske" target="_blank" class="btn">See on GitHub</a>
+
+    </div>
+
+    <div class="project-card">
+      <img src="images/project3.jpg" alt="Project 3">
+      <h3>Weather App</h3>
+      <p>Fetches real-time weather using the OpenWeather API and displays it beautifully.</p>
+      <a href="#" target="_blank">View Live</a>
+      <a href="https://github.com/Edkoske" target="_blank" class="btn">See on GitHub</a>
+
+    </div>
+  </div>
+</section>
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Contact Me</h2>
+
+    <form action="https://formspree.io/f/xovlwjld" method="POST" id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- JavaScript: silent on failure -->
+<script>
+  document.getElementById("contactForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        alert("✅ Thank you! Your message has been sent.");
+        form.reset();
+      }
+      // 🔇 No else block — no error message on failure
+    } catch (error) {
+      // 🔇 No network error alert either
+    }
+  });
+</script>
+
+
+
+
+<!-- Thank You Popup -->
+<div class="popup" id="thankYouPopup">
+  <div class="popup-content">
+    <p>✅ Thank you for reaching out!</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+<!-- Scroll To Top Button -->
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆</button>
+
+
+
+  <!-- Footer will load here -->
+  <div id="footer-placeholder"></div>
+
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/254727732157" class="whatsapp-float" target="_blank">💬</a>
+
+</body>
+</html>
