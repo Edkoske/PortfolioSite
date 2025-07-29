@@ -10,17 +10,13 @@
 
 
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/script.js" defer></script>
+  
 </head>
 <body>
 <div class="grid-overlay"></div>
 <canvas id="stars"></canvas>
-
-  <!-- Header will load here -->
- <!-- includes/header.html -->
+<!-- Header & Navigation -->
 <header class="site-header">
-  
-
   <nav class="navbar">
     <div class="logo"><a href="index.html">Edison</a></div>
 
@@ -30,11 +26,11 @@
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#resume">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 </header>
+
 
   <!-- Hero Section -->
 <section id="hero" class="hero-section">
@@ -47,7 +43,7 @@
     <a href="resume/Edison-Koske-Resume.pdf" class="btn-secondary" download>Download Resume</a>
   </div>
   <div class="hero-img">
-    <img src="images/profile.jpg" alt="Profile Image" />
+    <img src="images/profile (2).jpg" alt="Profile Image" />
   </div>
 </section>
 
@@ -213,18 +209,34 @@
 </section>
 
 
+<!-- Font Awesome CDN for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <section id="contact" class="contact">
   <div class="container">
     <h2>Contact Me</h2>
 
     <form action="https://formspree.io/f/xovlwjld" method="POST" id="contactForm">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-comment"></i>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+
+      <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
     </form>
   </div>
 </section>
+
 
 <!-- JavaScript: silent on failure -->
 <script>
@@ -252,6 +264,23 @@
   });
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggleBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    // Optional: close menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+      });
+    });
+  });
+</script>
 
 
 
@@ -289,5 +318,6 @@
     </div>
   </div>
 </footer>
+<script src="js/script.js" defer></script>
 </body>
 </html>
