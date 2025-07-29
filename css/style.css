@@ -1314,3 +1314,10 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background: #e60023;
 }
+.typewriter {
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  font-weight: bold;
+}
