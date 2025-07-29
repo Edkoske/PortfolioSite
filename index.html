@@ -15,6 +15,7 @@
   
 </head>
 <body>
+  
 <div class="grid-overlay"></div>
 <canvas id="stars"></canvas>
 <!-- Header & Navigation -->
@@ -39,7 +40,10 @@
 <section id="hero" class="hero-section">
   <div class="hero-content">
     <h1>Hi, I'm <span class="highlight">Edison</span></h1>
-    <h1 class="typewriter"><span id="typed-text"></span><span class="cursor">|</span></h1>
+    <h1 class="typewriter">
+  I am  <span id="typed-text"></span><span class="cursor"></span>
+</h1>
+
 
     <p class="tagline">A passionate Web Developer crafting modern websites</p>
     <a href="#projects" class="btn-primary">View My Projects</a>
@@ -105,10 +109,10 @@
   <h2>My Projects</h2>
   <div class="project-container">
     <div class="project-card">
-      <img src="images/project1.jpg" alt="Project 1">
+      <img sc="images/project1.jpg" alt="Project 1">
       <h3>Portfolio Website</h3>
       <p>A responsive website built with HTML, CSS, and JS showcasing my work and skills.</p>
-      <a href="#" target="_blank">View Live</a>
+      <a href="#https://portfolio-site-eta-eight.vercel.app/" target="_blank">View Live</a>
       <a href="https://github.com/Edkoske" target="_blank" class="btn">See on GitHub</a>
 
     </div>
@@ -336,6 +340,17 @@
     }, { threshold: 0.2 });
 
     animatedTexts.forEach(el => observer.observe(el));
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Typed("#typed-text", {
+      strings: ["a Web Developer", "an ICT Trainer", "a Designer", "a Creator"],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: true
+    });
   });
 </script>
 
