@@ -7,7 +7,9 @@
   <title>Edison | Portfolio</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
   
@@ -218,17 +220,17 @@
 
     <form action="https://formspree.io/f/xovlwjld" method="POST" id="contactForm">
       <div class="input-group">
-        <i class="fas fa-user"></i>
+        <i class=""></i>
         <input type="text" name="name" placeholder="Your Name" required>
       </div>
 
       <div class="input-group">
-        <i class="fas fa-envelope"></i>
+        <i class=""></i>
         <input type="email" name="email" placeholder="Your Email" required>
       </div>
 
       <div class="input-group">
-        <i class="fas fa-comment"></i>
+        <i class=""></i>
         <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       </div>
 
@@ -306,8 +308,8 @@
   <div class="footer-container">
     <p>&copy; 2025 <strong>Edison</strong>. All rights reserved.</p>
     <div class="footer-links">
-      <a href="mailto:edisonkipkemoi319gmail.com" title="Email">
-        <i class="fas fa-envelope"></i> edisonkipkemoi319gmail.com
+      <a href="mailto:edisonkipkemoi319@gmail.com" title="Email">
+        <i class="fas fa-envelope"></i> edisonkipkemoi319@gmail.com
       </a>
       <a href="tel:+254727732157" title="Call">
         <i class="fas fa-phone-alt"></i> +254 727 732 157
@@ -318,6 +320,23 @@
     </div>
   </div>
 </footer>
+
 <script src="js/script.js" defer></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const animatedTexts = document.querySelectorAll('.animate-text');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    animatedTexts.forEach(el => observer.observe(el));
+  });
+</script>
+
 </body>
 </html>

@@ -1129,3 +1129,188 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: darkred;
 }
+/* Global animation class */
+.animate-text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animate-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.contact {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #111, #1c1c1c);
+  color: #fff;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: none;
+  border-radius: 6px;
+  background: #222;
+  color: #fff;
+  font-size: 1em;
+}
+
+.contact button {
+  margin-top: 10px;
+  padding: 12px 30px;
+  background: crimson;
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s;
+}
+
+.contact button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px crimson;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.footer {
+  background: linear-gradient(to right, #111, #1c1c1c);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.footer p {
+  margin: 0 0 15px;
+  font-size: 1.1em;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: crimson;
+}
+
+.footer-links i {
+  margin-right: 8px;
+}
+.contact {
+  background: #111;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#contactForm {
+  max-width: 600px;
+  margin: auto;
+  background: #222;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  background: #fff;
+  color: #111;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  box-shadow: 0 0 5px #f44336;
+}
+
+button[type="submit"] {
+  padding: 12px 25px;
+  background: crimson;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #e60023;
+}
